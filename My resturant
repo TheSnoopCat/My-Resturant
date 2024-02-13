@@ -45,22 +45,22 @@ local Slots = {"57"}
 local FurnituresCooldowns = {}
 
 -- Settings Variables
-local FastWaiter = false
-local GoldFood = false
-local AutoGift = false
-local FastOrder = false
-local FastNPC = false
-local TeleportNPC = false
+local FastWaiter = true
+local GoldFood = true
+local AutoGift = true
+local FastOrder = true
+local FastNPC = true
+local TeleportNPC = true
 local NPCSpeed = 100
-local AutoInteract = false
-local AutoBuyWorkers = false
-local AutoBlacklist = false
-local AutoCloseRestaurant = false
+local AutoInteract = true
+local AutoBuyWorkers = true
+local AutoBlacklist = true
+local AutoCloseRestaurant = true
 local AutoCloseEvery = 600
 local LastTimeClose = 0
 
 --// Force better customer
-local ForceCustomers = false
+local ForceCustomers = true
 local ForceVIP = false
 local ForcePirate = false
 local ForceYoutuber = false
@@ -69,13 +69,13 @@ local ForceCorruptedVIP = false
 local ForceSanta = false
 local ForceElf = false
 local ForceLifeguard = false
-local ForceAlien = false
+local ForceAlien = true
 local ForcePrincess = false
 local ForceSuperHero = false
 
-local InstantCook = false
-local InstantEat = false
-local InstantWash = false
+local InstantCook = true
+local InstantEat = true
+local InstantWash = true
 
 local IS_DEV_MODE = true
 local PRINT_NETWORK = false
@@ -810,7 +810,7 @@ end
 local Original_RandomFoodChoice = Food.RandomFoodChoice
 Food.RandomFoodChoice = function(customerOwnerUID, customerOwnerID, isRichCustomer, isPirateCustomer, isNearTree)
     if GoldFood then
-		local spoof = Food.new("45", customerOwnerUID, customerOwnerID, true, true)
+		local spoof = Food.new("77", customerOwnerUID, customerOwnerID, true, true)
 		spoof.IsGold = true
 		return spoof
 	end
